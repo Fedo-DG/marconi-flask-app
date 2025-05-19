@@ -38,25 +38,14 @@
     </style>
   </head>
   <body>
-        <h1>Silly Cats Community</h1>
+    <h1>Silly Cats Community</h1>
 
+    {% for post in posts %}
     <div class="post">
-      <h2>My cat sleeping in a box</h2>
-      <p>Look how silly he looks!</p>
-      <img src="cat1.jpg" alt="Cat sleeping in a box" width="300" />
+      <h2>{{post.title}}</h2>
+      <p>{{post.content}}</p>
+      <img src={{post.image}} alt="Cat sleeping in a box" width="300" />
     </div>
-
-    <div class="post">
-      <h2>Caught in the act!</h2>
-      <p>He knows he's not allowed on the counter.</p>
-      <img src="cat2.jpg" alt="Cat on kitchen counter" width="300" />
-    </div>
-
-    <div class="post">
-      <h2>Just hanging out</h2>
-      <p>He loves the top of the fridge.</p>
-      <img src="cat3.jpg" alt="Cat on top of fridge" width="300" />
-    </div>
-    
+    {% endfor %}
   </body>
 </html>
